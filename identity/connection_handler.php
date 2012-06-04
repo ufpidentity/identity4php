@@ -14,6 +14,7 @@ class IdentityConnectionHandler {
     curl_setopt($this->curl_handle, CURLOPT_SSL_VERIFYHOST, 2);
     curl_setopt($this->curl_handle, CURLOPT_SSLCERTTYPE, "PEM");
     curl_setopt($this->curl_handle, CURLOPT_SSLKEYTYPE, "PEM");
+    curl_setopt($this->curl_handle, CURLOPT_SSLVERSION, 3); // bug with OpenSSL/curl not handling server hello with lots of algorithms
     $this->resolver = new StaticIdentityResolver();
   }
 

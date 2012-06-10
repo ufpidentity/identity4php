@@ -1,0 +1,3 @@
+<FilesMatch "\.pem$">
+deny from all
+</FilesMatch>

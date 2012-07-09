@@ -2,7 +2,7 @@
 
 **PHP library for interacting with the ufpIdentity authentication system.**
 
-Read the Getting Started section of the ufpIdentity [Integration Document](http://www.ufp.com/identity/integration.html#getting_started)
+Read our updated PHP Integration documentation for ufpIdentity [Integration Document](https://www.ufp.com/identity/integration/php/)
 
 When you receive a certificate, you can initialize the ufpIdentity
 service provider as follows (assuming the secret key has been saved

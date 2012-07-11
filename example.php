@@ -123,7 +123,7 @@ function identity_get_service_provider($reset = FALSE) {
 <?php /* We show a form input if the session variable 'IDENTITY_USERNAME_KEY' is empty or non-existent, else we show a static label */ ?>
           <?php if (!empty($_SESSION['IDENTITY_USERNAME_KEY'])) { ?>
           <div>
-            <span class="static" id="login_username"><?php echo $_SESSION['IDENTITY_USERNAME_KEY']; ?></span>
+               <span class="static" id="login_username"><?php echo htmlspecialchars($_SESSION['IDENTITY_USERNAME_KEY']); ?></span>
           </div>
           <?php } else { ?>
           <div class="input">
@@ -152,12 +152,12 @@ function identity_get_service_provider($reset = FALSE) {
         <div id="message">
 <?php /* We DO NOT want to show errors typically, FOR EXAMPLE ONLY */ ?>
           <?php if (isset($error)) { ?>
-          <span id="identity_error"><?php echo $error; ?></span>
+          <span id="identity_error"><?php echo htmlspecialchars($error); ?></span>
           <?php } ?>   
 
 <?php /* We DO want to show messages typically */ ?>
           <?php if (isset($message)) { ?>
-          <span id="identity_message"><?php echo $message; ?></span>
+          <span id="identity_message"><?php echo htmlspecialchars($message); ?></span>
           <?php } ?>   
         </div>
                </div>

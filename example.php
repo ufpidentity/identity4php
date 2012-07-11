@@ -151,14 +151,14 @@ function identity_get_service_provider($reset = FALSE) {
         
         <div id="message">
 <?php /* We DO NOT want to show errors typically, FOR EXAMPLE ONLY */ ?>
-          <?php if (isset($error)) { ?>
+          <?php if (isset($error)):  ?>
           <span id="identity_error"><?php echo htmlspecialchars($error); ?></span>
-          <?php } ?>   
+          <?php endif ?>
 
 <?php /* We DO want to show messages typically */ ?>
-          <?php if (isset($message)) { ?>
+          <?php if (isset($message)): ?>
           <span id="identity_message"><?php echo htmlspecialchars($message); ?></span>
-          <?php } ?>   
+          <?php endif ?>
         </div>
                </div>
       </div>

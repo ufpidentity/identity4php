@@ -119,7 +119,7 @@ function identity_get_service_provider($reset = FALSE) {
       </div>
       <div id="formRight">
         <p>Username: guest, Password: guest</p>
-        <form id="login" method="post" action="example.php"> 
+        <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <?php /* We show a form input if the session variable 'IDENTITY_USERNAME_KEY' is empty or non-existent, else we show a static label */ ?>
           <?php if (!empty($_SESSION['IDENTITY_USERNAME_KEY'])) { ?>
           <div>

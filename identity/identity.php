@@ -79,8 +79,8 @@ class IdentityServiceProvider {
     return $pretext;
   }
 
-  function preAuthenticate($name, $host) {
-    $data = array( "name" => $name, "client_ip" => $host);
+  function preAuthenticate($name, $host, $level = 0) {
+    $data = array( "name" => $name, "client_ip" => $host, "level" => $level);
     $xml = $this->connection_handler->sendMessage("preauthenticate", $data);
     return $this->parseAuthenticationResult($xml);
   }

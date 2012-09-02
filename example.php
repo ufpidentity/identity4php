@@ -95,7 +95,7 @@ function identity_get_service_provider($reset = FALSE) {
     if (!isset($provider)) {
       $provider = new IdentityServiceProvider();
       $provider->getConnectionHandler()->setCAInfo('identity/truststore.pem');
-      $provider->getConnectionHandler()->setSSLCert('example.pem');
+      $provider->getConnectionHandler()->setSSLCert('example.com.pem');
       $provider->getConnectionHandler()->setSSLPassword('test');
     }
   }

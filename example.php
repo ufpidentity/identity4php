@@ -70,7 +70,7 @@ case 'POST':
       header('Location: example.php');
     } else if ($context['result']->getText() == 'SUCCESS') {
       // SUCCESS means the user has successfully logged in. Unset the Identity session variables and do whatever your particular webapp does for a logged in user. 
-      $_SESSION['authenticated'] = $_SESSION['IDENTITY_USERNAME_KEY'];
+      $_SESSION['authenticated'] = $context['name'];
       unset($_SESSION['IDENTITY_USERNAME_KEY']);
       unset($_SESSION['IDENTITY_DISPLAY_ITEMS']);
       $message = $context['result']->getMessage();

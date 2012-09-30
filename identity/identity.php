@@ -28,6 +28,7 @@ class IdentityServiceProvider {
     $result = Result::unmarshallResult($xml);
     $pretext = array('name' => (string)$xml->name[0],
                      'result' => $result,
+                     'xml-type' => $xml->getName(),
                      );
     if ($result->getText() == "SUCCESS") {
       $form_elements = array();
@@ -45,6 +46,7 @@ class IdentityServiceProvider {
     
     $pretext = array('name' => (string)$xml->name[0],
                      'result' => $result,
+                     'xml-type' => $xml->getName(),
                      );
     return $pretext;
   }
@@ -66,6 +68,7 @@ class IdentityServiceProvider {
     
     $pretext = array('name' => (string)$xml->name[0],
                      'result' => $result,
+                     'xml-type' => $xml->getName(),
                      );
 
     if (($result->getText() == "SUCCESS") || ($result->getText() == "CONTINUE")) {
